@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from "react";
-import "./App.css"; // Make sure you have an App.css file with styles in the src directory
-import skillsData from "./skills.json"; // Your skills.json file in the src directory
+import "./App.css";
+import skillsData from "./skills.json";
 
 function App() {
   const [skills, setSkills] = useState(() => {
-    // Load skills from Local Storage or use initial data from skills.json
     const savedSkills = localStorage.getItem("skills");
     return savedSkills ? JSON.parse(savedSkills) : skillsData.skills;
   });
 
-  const [filter, setFilter] = useState("all"); // 'all', 'learned', or 'unlearned'
+  const [filter, setFilter] = useState("all");
 
-  // Update Local Storage when skills state changes
   useEffect(() => {
     localStorage.setItem("skills", JSON.stringify(skills));
   }, [skills]);
