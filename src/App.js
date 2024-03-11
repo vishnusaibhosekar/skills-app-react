@@ -1,31 +1,45 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import skillsData from "./skills.json";
+import data from "./skills.json";
 
 function App() {
-  const [skills, setSkills] = useState(() => {
-    const savedSkills = localStorage.getItem("skills");
-    return savedSkills ? JSON.parse(savedSkills) : skillsData.skills;
+  // We assume skillsData is an object with a 'categories' array inside it
+  const [categories, setCategories] = useState(() => {
+    const savedCategories = localStorage.getItem("categories");
+    return savedCategories ? JSON.parse(savedCategories) : data.categories;
   });
 
   const [filter, setFilter] = useState("all");
 
   useEffect(() => {
-    localStorage.setItem("skills", JSON.stringify(skills));
-  }, [skills]);
+    localStorage.setItem("categories", JSON.stringify(categories));
+  }, [categories]);
 
-  const handleLearnedChange = (id) => {
-    const updatedSkills = skills.map((skill) => {
-      if (skill.id === id) {
-        return { ...skill, learned: !skill.learned };
+  const handleLearnedChange = (categoryId, skillId) => {
+    const updatedCategories = categories.map((category) => {
+      if (category.category === categoryId) {
+        const updatedSkills = category.skills.map((skill) => {
+          if (skill.id === skillId) {
+            return { ...skill, learned: !skill.learned };
+          }
+          return skill;
+        });
+        return { ...category, skills: updatedSkills };
       }
-      return skill;
+      return category;
     });
-    setSkills(updatedSkills);
+    setCategories(updatedCategories);
   };
 
   const handleFilterChange = (newFilter) => {
     setFilter(newFilter);
+  };
+
+  const filterSkills = (skills) => {
+    return skills.filter((skill) => {
+      if (filter === "all") return true;
+      return filter === "learned" ? skill.learned : !skill.learned;
+    });
   };
 
   return (
@@ -40,26 +54,28 @@ function App() {
           </button>
         </div>
       </div>
-      <ul>
-        {skills
-          .filter((skill) => {
-            if (filter === "all") return true;
-            return filter === "learned" ? skill.learned : !skill.learned;
-          })
-          .map((skill) => (
-            <li
-              key={skill.id}
-              className={`skillItem ${skill.learned ? "learned" : ""}`}
-            >
-              <input
-                type="checkbox"
-                checked={skill.learned}
-                onChange={() => handleLearnedChange(skill.id)}
-              />
-              {skill.name}
-            </li>
-          ))}
-      </ul>
+      {categories.map((category) => (
+        <div key={category.category} className="category">
+          <h2>{category.category}</h2>
+          <div className="skills-grid">
+            {filterSkills(category.skills).map((skill) => (
+              <div
+                key={skill.id}
+                className={`skillItem ${skill.learned ? "learned" : ""}`}
+              >
+                <input
+                  type="checkbox"
+                  checked={skill.learned}
+                  onChange={() =>
+                    handleLearnedChange(category.category, skill.id)
+                  }
+                />
+                {skill.name}
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }

@@ -1,19 +1,104 @@
 {
-  "skills": [
-    { "id": 1, "name": "Java 1.8", "learned": false },
-    { "id": 2, "name": "SQL/PLSQL", "learned": false },
-    { "id": 3, "name": "HTML5", "learned": false },
-    { "id": 4, "name": "CSS3", "learned": false },
-    { "id": 5, "name": "JavaScript/ECMAScript", "learned": false },
-    { "id": 6, "name": "React JS", "learned": false },
-    { "id": 7, "name": "Node.js", "learned": false },
-    { "id": 8, "name": "Spring Framework", "learned": false },
-    { "id": 9, "name": "Docker", "learned": false },
-    { "id": 10, "name": "Kubernetes", "learned": false },
-    { "id": 11, "name": "AWS (EC2, S3, Lambda)", "learned": false },
-    { "id": 12, "name": "Agile Methodologies", "learned": false },
-    { "id": 13, "name": "Git", "learned": false },
-    { "id": 14, "name": "Angular", "learned": false },
-    { "id": 15, "name": "MongoDB", "learned": false }
+  "categories": [
+    {
+      "category": "Java/J2EE Technologies",
+      "skills": [
+        { "id": 1, "name": "Java", "learned": false },
+        { "id": 2, "name": "JavaBeans", "learned": false },
+        { "id": 3, "name": "MVC", "learned": false },
+        { "id": 4, "name": "RMI", "learned": false },
+        { "id": 5, "name": "ANT", "learned": false },
+        { "id": 6, "name": "MAVEN", "learned": false },
+        { "id": 7, "name": "Log4j", "learned": false },
+        { "id": 8, "name": "XML DOM", "learned": false },
+        { "id": 9, "name": "JNDI", "learned": false },
+        { "id": 10, "name": "JUNIT", "learned": false },
+        { "id": 11, "name": "Web services", "learned": false },
+        { "id": 12, "name": "Multithreading", "learned": false }
+      ]
+    },
+    {
+      "category": "Web Technologies",
+      "skills": [
+        { "id": 13, "name": "HTML5", "learned": false },
+        { "id": 14, "name": "JavaScript", "learned": false },
+        { "id": 15, "name": "jQuery", "learned": false },
+        { "id": 16, "name": "CSS3", "learned": false },
+        { "id": 17, "name": "AJAX", "learned": false },
+        { "id": 18, "name": "Angular", "learned": false },
+        { "id": 19, "name": "Angular JS", "learned": false },
+        { "id": 20, "name": "React.js", "learned": false },
+        { "id": 21, "name": "Redux", "learned": false },
+        { "id": 22, "name": "React Native", "learned": false },
+        { "id": 23, "name": "Next.js", "learned": false },
+        {
+          "id": 24,
+          "name": "Web Services (SOAP, REST, WSDL)",
+          "learned": false
+        }
+      ]
+    },
+    {
+      "category": "Frameworks",
+      "skills": [
+        { "id": 25, "name": "Hibernate", "learned": false },
+        { "id": 26, "name": "JPA", "learned": false },
+        { "id": 27, "name": "JSF", "learned": false },
+        {
+          "id": 28,
+          "name": "Spring (IOC, AOP, MVC, Boot, ORM, Dependency Injection)",
+          "learned": false
+        }
+      ]
+    },
+    {
+      "category": "IDEs",
+      "skills": [
+        { "id": 29, "name": "Eclipse", "learned": false },
+        { "id": 30, "name": "NetBeans", "learned": false }
+      ]
+    },
+    {
+      "category": "Web/Application Servers",
+      "skills": [
+        { "id": 31, "name": "Web Logic", "learned": false },
+        { "id": 32, "name": "Apache Tomcat", "learned": false },
+        { "id": 33, "name": "JBOSS", "learned": false }
+      ]
+    },
+    {
+      "category": "Cloud Technologies",
+      "skills": [
+        { "id": 34, "name": "AWS", "learned": false },
+        { "id": 35, "name": "GCP", "learned": false }
+      ]
+    },
+    {
+      "category": "Web Service Technologies",
+      "skills": [
+        { "id": 36, "name": "SOAP", "learned": false },
+        { "id": 37, "name": "REST", "learned": false }
+      ]
+    },
+    {
+      "category": "Version Control Tools",
+      "skills": [
+        { "id": 38, "name": "GIT", "learned": false },
+        { "id": 39, "name": "CVS", "learned": false },
+        { "id": 40, "name": "SVN", "learned": false }
+      ]
+    },
+    {
+      "category": "Debugging Tools",
+      "skills": [{ "id": 41, "name": "Jira", "learned": false }]
+    },
+    {
+      "category": "Database Environments",
+      "skills": [
+        { "id": 42, "name": "SQL Server", "learned": false },
+        { "id": 43, "name": "MySQL", "learned": false },
+        { "id": 44, "name": "MongoDB", "learned": false }
+      ]
+    }
   ]
 }
