@@ -1,38 +1,87 @@
 .App {
   text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px 20px 20px;
+  background-color: #121212; /* Dark background for the app */
+  color: #ffffff; /* Light text color */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  background-color: #1f1f1f; /* Darker background for the navbar */
+  padding: 0px 10px 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #333; /* Dark border for some contrast */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  color: #ffffff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+button {
+  background-color: #007bff;
   color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button:focus {
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skillItem {
+  background-color: #262626; /* Darker background for skill items */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #333; /* Dark border for skill items */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px; /* Add space between items */
+}
+
+.learned {
+  text-decoration: line-through;
+  color: #28a745; /* Keep the learned color or use a darker shade if preferred */
+}
+
+.skillItem input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
+}
+
+/* Additional styles for dark theme */
+body {
+  background-color: #121212; /* Dark background for the body */
+  color: #ffffff; /* Light text color for the body */
+}
+
+input[type="checkbox"] {
+  accent-color: #007bff; /* Checkbox color adjustment for better visibility */
 }

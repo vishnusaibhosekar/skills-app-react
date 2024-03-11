@@ -1,0 +1,19 @@
+{
+  "skills": [
+    { "id": 1, "name": "Java 1.8", "learned": false },
+    { "id": 2, "name": "SQL/PLSQL", "learned": false },
+    { "id": 3, "name": "HTML5", "learned": false },
+    { "id": 4, "name": "CSS3", "learned": false },
+    { "id": 5, "name": "JavaScript/ECMAScript", "learned": false },
+    { "id": 6, "name": "React JS", "learned": false },
+    { "id": 7, "name": "Node.js", "learned": false },
+    { "id": 8, "name": "Spring Framework", "learned": false },
+    { "id": 9, "name": "Docker", "learned": false },
+    { "id": 10, "name": "Kubernetes", "learned": false },
+    { "id": 11, "name": "AWS (EC2, S3, Lambda)", "learned": false },
+    { "id": 12, "name": "Agile Methodologies", "learned": false },
+    { "id": 13, "name": "Git", "learned": false },
+    { "id": 14, "name": "Angular", "learned": false },
+    { "id": 15, "name": "MongoDB", "learned": false }
+  ]
+}
