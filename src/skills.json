@@ -12,7 +12,7 @@
         { "id": 7, "name": "Log4j", "learned": false },
         { "id": 8, "name": "XML DOM", "learned": false },
         { "id": 9, "name": "JNDI", "learned": false },
-        { "id": 10, "name": "JUNIT", "learned": false },
+        { "id": 10, "name": "JUnit", "learned": false },
         { "id": 11, "name": "Web services", "learned": false },
         { "id": 12, "name": "Multithreading", "learned": false }
       ]
